@@ -171,6 +171,8 @@ jupyter_client = 'jupyter-client<6.0'  # v6 breaks pweave
 nbclient = 'nbclient==0.1.0'  # compatible with our pweave => jupyter_client restrictions
 nbconvert = 'nbconvert==5.5.0'
 
+# MLJ: commented out pyspark from install_requires and setup_requires
+# - Databricks provides pyspark
 setup(
     name='pyrasterframes',
     description='Access and process geospatial raster data in PySpark DataFrames',
@@ -190,7 +192,7 @@ setup(
         gdal,
         pytz,
         shapely,
-        pyspark,
+#         pyspark,
         numpy,
         pandas,
         pyproj,
@@ -200,7 +202,7 @@ setup(
     setup_requires=[
         pytz,
         shapely,
-        pyspark,
+#         pyspark,
         numpy,
         matplotlib,
         pandas,

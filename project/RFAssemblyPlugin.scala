@@ -41,7 +41,11 @@ object RFAssemblyPlugin extends AutoPlugin {
       "List of regular expressions identifying jar file names that will be force-excluded from assembly"
     )
   }
-
+  // MLJ: Added:
+  //        "com.chuusai.shapeless",
+  //        "org.slf4j",
+  //        "com.typesafe",
+  //        "com.github.benmanes.caffeine"
   override def projectSettings = Seq(
     assembly / test := {},
     autoImport.assemblyExcludedJarPatterns := Seq(
@@ -61,7 +65,11 @@ object RFAssemblyPlugin extends AutoPlugin {
         "com.fasterxml.jackson",
         "io.netty",
         "spire",
-        "cats.kernel"
+        "cats.kernel",
+        "com.chuusai.shapeless",
+        "org.slf4j",
+        "com.typesafe",
+        "com.github.benmanes.caffeine"
       )
       shadePrefixes.map(p => ShadeRule.rename(s"$p.**" -> s"shaded.rasterframes.$p.@1").inAll)
     },

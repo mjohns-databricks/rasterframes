@@ -171,6 +171,8 @@ jupyter_client = 'jupyter-client<6.0'  # v6 breaks pweave
 nbclient = 'nbclient==0.1.0'  # compatible with our pweave => jupyter_client restrictions
 nbconvert = 'nbconvert==5.5.0'
 
+ipykernel = 'ipykernel<6.9.2' # MLJ: added to enforce local build requirements
+
 # MLJ: commented out pyspark from install_requires
 # - Databricks provides pyspark
 # - also commented out 'pyrasterframes.jars' from `packages` as JARS added separately.

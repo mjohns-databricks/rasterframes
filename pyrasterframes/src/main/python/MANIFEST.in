@@ -1,4 +1,4 @@
 
 global-exclude *.py[cod] __pycache__ .DS_Store
-# MLJ: don't want jars in WHL
-#recursive-include deps/jars *.jar
+# MLJ: want jars in WHL?
+recursive-include pyrasterframes/jars *.jar

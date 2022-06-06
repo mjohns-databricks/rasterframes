@@ -119,7 +119,8 @@ object PythonBuildPlugin extends AutoPlugin {
 
   override def projectSettings = Seq(
     assembly / test := {},
-    pythonCommand := "python",
+    //MLJ: change from "python" to "python3"
+    pythonCommand := "python3",
     pySetup := {
       val s = streams.value
       val wd = copyPySources.value

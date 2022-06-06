@@ -21,9 +21,12 @@
 
 package org.locationtech.rasterframes.util
 
-import org.locationtech.rasterframes.ref.{DelegatingRasterSource, RasterRef, RFRasterSource}
+import org.locationtech.rasterframes.ref.{DelegatingRasterSource, RFRasterSource, RasterRef}
 import org.locationtech.rasterframes.ref._
 import com.esotericsoftware.kryo.Kryo
+import geotrellis.proj4.CRS
+import geotrellis.raster.io.geotiff.GeoTiffTile
+import geotrellis.raster.{BufferTile, CompositeTile, CroppedTile, DelayedConversionTile, PaddedTile, Tile}
 import geotrellis.raster.io.geotiff.reader.GeoTiffInfo
 import geotrellis.spark.store.kryo.KryoRegistrator
 
